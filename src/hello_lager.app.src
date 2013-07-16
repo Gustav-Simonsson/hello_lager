@@ -1,0 +1,9 @@
+{application, hello_lager,
+    [
+      {description, "Lager log handler for Hello"},
+      {vsn, git},
+      {modules, []},
+      {applications, [kernel, stdlib, lager]},
+      {registered, []}
+    ]
+}.
