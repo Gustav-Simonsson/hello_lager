@@ -26,10 +26,5 @@ request(CallbackModule, Handler, Endpoint, Request, Response) ->
                [CallbackModule, Handler, Endpoint, Request, Response]).
 
 bad_request(CallbackModule, Handler, Endpoint, Message, Response) ->
-    lager:warning([{handler, CallbackModule}],
-                  "~s: ~p ~p~n~p~n~p~n",
+    lager:warning("~s: ~p ~p ~p ~p~n",
                   [CallbackModule, Handler, Endpoint, Message, Response]).
-
-%% ----------------------------------------------------------------------------
-%% -- Helpers
-
